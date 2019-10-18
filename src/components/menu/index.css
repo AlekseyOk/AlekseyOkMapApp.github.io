@@ -1,0 +1,13 @@
+.buttonPublicPage {
+    margin-right: 30px;
+    display: inline-block;
+}
+.buttonPrivatePage {
+    display: inline-block;
+}
+.menu {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 66%;
+    display: flex;
+}
