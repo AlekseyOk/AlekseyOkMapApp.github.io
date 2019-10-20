@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 function MapYandex({ endpoint, coodrs }) {
   return (
-    <div style={{ width:'66.6%', height:'100%', display:'inline-block'}}>
+    <div style={{ width:'66.6%', display:'inline-block'}}>
 
         <YMaps>
             <Map
