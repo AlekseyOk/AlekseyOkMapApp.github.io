@@ -5,9 +5,7 @@ import PropTypes from 'prop-types'
 function MapYandex({ endpoint, coodrs }) {
   return (
     <div style={{ width:'66.6%', display:'inline-block'}}>
-
         <YMaps>
-        
             <Map
               state={coodrs ? {
                 zoom: 15,
@@ -36,7 +34,6 @@ function MapYandex({ endpoint, coodrs }) {
               </div>
             ))}
             </Map>
-            
       </YMaps>
   </div>
   );
