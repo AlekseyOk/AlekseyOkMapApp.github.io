@@ -33,8 +33,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "auth0-js": "^9.11.2"
   }
 }
