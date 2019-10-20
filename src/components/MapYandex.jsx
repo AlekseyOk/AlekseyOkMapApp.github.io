@@ -28,7 +28,7 @@ function MapYandex({ endpoint, coodrs }) {
                     modules={['geoObject.addon.balloon']}
                     defaultGeometry={coodrs.split(',').map((item) => Number(item.trim()))}
                     properties={{
-                    balloonContentBody: `${name.split(',').map((item) => item.trim())}`,
+                    balloonContentBody: name,
                   }}
                 />
               </div>
