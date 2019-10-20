@@ -7,6 +7,7 @@ function MapYandex({ endpoint, coodrs }) {
     <div style={{ width:'66.6%', display:'inline-block'}}>
 
         <YMaps>
+        
             <Map
               state={coodrs ? {
                 zoom: 15,
