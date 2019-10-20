@@ -1,11 +1,12 @@
 import React from 'react';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
+import PropTypes from 'prop-types'
 
 function MapYandex({ endpoint, coodrs }) {
   return (
     <div style={{ width:'66.6%', height:'100%', display:'inline-block'}}>
-        <YMaps>
 
+        <YMaps>
             <Map
               state={coodrs ? {
                 zoom: 15,
@@ -23,7 +24,7 @@ function MapYandex({ endpoint, coodrs }) {
             >
 
             {endpoint.map(({ coodrs, name }) => (
-              <div  key={name}>
+              <div key={name}>
                   <Placemark
                     modules={['geoObject.addon.balloon']}
                     defaultGeometry={coodrs.split(',').map((item) => Number(item.trim()))}
@@ -38,6 +39,11 @@ function MapYandex({ endpoint, coodrs }) {
       </YMaps>
   </div>
   );
+}
+
+MapYandex.propTypes = {
+  endpoint: PropTypes.array,
+  coodrs: PropTypes.oneOfType([ PropTypes.string, PropTypes.array ])
 }
 
 export default MapYandex;

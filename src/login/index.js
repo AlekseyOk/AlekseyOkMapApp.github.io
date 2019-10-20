@@ -14,13 +14,13 @@ const Forms = withAuth(class extends React.Component {
     error: false
   }
 
-  handleNameChange = (e) => {
-    this.setState({ name: e.currentTarget.value })
+  handleNameChange = ({ target: { value }}) => {
+    this.setState({ name: value })
     this.setState({ error: false })
   }
 
-  handlePasswordChange = (e) => { 
-    this.setState({ password: e.currentTarget.value })
+  handlePasswordChange = ({ target: { value }}) => { 
+    this.setState({ password: value })
     this.setState({ error: false })
   }
 
@@ -43,7 +43,8 @@ const Forms = withAuth(class extends React.Component {
        isAuthorized ? (
             <Redirect to="/Private" />
           ) : (
-             <div className="form">
+          <React.Fragment>
+             <form className="form">
               <FormControl className="inputName">
                 <InputLabel htmlFor="my-input">Name</InputLabel>
                 <Input id="my-input" aria-describedby="my-helper-text" onChange={this.handleNameChange}/>
@@ -58,7 +59,8 @@ const Forms = withAuth(class extends React.Component {
              <div className="buttonAuthorize" >
                <Button variant="outlined"  onClick={this.login}>Login</Button>
              </div>
-            </div>
+            </form>
+         </React.Fragment>
           )
     )
   }
