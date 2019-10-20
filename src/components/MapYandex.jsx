@@ -11,7 +11,7 @@ function MapYandex({ endpoint, coodrs }) {
                 zoom: 15,
                 center: coodrs,
                 controls: ['zoomControl']
-              }: console.log()}
+              }: undefined}
               defaultState={{
                 center: [53.9000000, 27.5666700],
                 zoom: 12,
