@@ -5,7 +5,10 @@ import './index.css';
 
 class App extends React.Component {
 
-  static timerId;
+  constructor() {
+    super();
+    this.timerId = null;
+  }
   
   state = {
     coodrs: '',
@@ -13,15 +16,15 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-      fetch('http://localhost:3000/endpoint.json')
-        .then(response => {
-          return response.json()
-        })
-        .then(data => {
-          this.setState({ data: data })
-        })
+        fetch('http://localhost:3000/endpoint.json')
+          .then(response => {
+            return response.json()
+          })
+          .then(data => {
+            this.setState({ data: data })
+          })
             
-      App.timerId = setInterval(()=> {
+      this.timerId = setInterval(()=> {
         fetch('http://localhost:3000/endpoint.json')
           .then(response => {
             return response.json()
@@ -33,7 +36,7 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
-     clearInterval(App.timerId)
+     clearInterval(this.timerId)
   }
 
   changeCenter = (coordinates) => {
