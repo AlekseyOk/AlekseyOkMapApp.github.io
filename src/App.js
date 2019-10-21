@@ -5,7 +5,7 @@ import Private from "./private/index";
 import Login from "./login/index";
 import { AuthProvider } from "./auth"
 import { PrivateRoute } from "./PrivateRoute"
-import  SimpleMenu  from "./components/menu/index.js"
+import  SimpleMenu  from "./menu/index.js"
 import { createBrowserHistory } from "history";
 
 export const history = createBrowserHistory();

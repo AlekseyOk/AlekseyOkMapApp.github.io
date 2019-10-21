@@ -1,6 +1,6 @@
 import React from 'react';
-import  MapYandex  from '../components/MapYandex.jsx';
-import  Buttons  from '../components/buttons.jsx';
+import  MapYandex  from './MapYandex.jsx';
+import  Buttons  from './buttons.jsx';
 import './index.css';
 
 class App extends React.Component {
