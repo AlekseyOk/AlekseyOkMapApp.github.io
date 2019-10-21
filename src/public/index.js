@@ -5,7 +5,7 @@ import './index.css';
 
 class App extends React.Component {
 
-  constructor () {
+  constructor() {
     super();
     this.timerId = null;
   }
@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-             fetch('http://localhost:3000/endpoint.json')
+        fetch('http://localhost:3000/endpoint.json')
           .then(response => {
             return response.json()
           })
@@ -24,15 +24,15 @@ class App extends React.Component {
             this.setState({ data: data })
           })
             
-           this.timerId = setInterval(()=> {
-            fetch('http://localhost:3000/endpoint.json')
+    this.timerId = setInterval(()=> {
+        fetch('http://localhost:3000/endpoint.json')
           .then(response => {
             return response.json()
           })
           .then(data => {
             this.setState({ data: data })
           })
-      }, 3000);
+    }, 3000);
   }
 
   componentWillUnmount() {

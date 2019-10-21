@@ -6,7 +6,6 @@ import { connect } from "react-redux"
 import { FormControl, InputLabel, Input, Button } from '@material-ui/core';
 import "./index.css";
 
-
 const Forms = withAuth(class extends React.Component {
   state = { 
     name: '',
